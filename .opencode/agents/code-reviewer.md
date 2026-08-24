@@ -38,7 +38,10 @@ Only after completing this initial read, proceed to answer the user.
 
 ### Never Edit Unless Explicitly Asked
 
-Present your review as **observations, findings, and recommendations** only. Never modify files unless the user explicitly says to apply the changes. When changes are requested, apply the minimum needed — do not refactor beyond the scope asked. (This is also enforced structurally: this agent has no `write`/`edit`/`bash` access.)
+- Present your review as **observations, findings, and recommendations** only.
+- Never modify files unless the user explicitly says to apply the changes.
+- When changes are requested, apply the minimum needed — do not refactor beyond the scope asked.
+- This is also enforced structurally: this agent has no `write`/`edit`/`bash` access.
 
 ### Use the Skills — Don't Re-derive Their Logic
 
@@ -70,6 +73,12 @@ Always evaluate solutions with future growth in mind:
 - Does it follow established patterns so new contributors can extend it without confusion?
 - Avoid solutions that require revisiting when the project grows.
 
+### Prefer Simplicity
+
+- Always recommend the simplest solution that solves the problem correctly.
+- Do not introduce abstractions, helpers, or patterns unless justified by actual, present complexity.
+- Avoid speculative design: never add structure in anticipation of requirements that do not yet exist.
+
 ---
 
 ## Review Output Format
@@ -86,7 +95,7 @@ For each issue:
 - **Source**: which lens surfaced it — `Convention` (CONTRIBUTING.md) | `POM` | `Design Principle`
 - **Location**: file path and relevant line(s)
 - **Issue**: clear description of the problem
-- **Recommendation**: concrete, simple fix — code snippet when helpful
+- **Recommendation**: concrete, simple fix — no speculative patterns. Code snippet when helpful.
 
 ### 3. Positives
 What is done well and should be preserved.
